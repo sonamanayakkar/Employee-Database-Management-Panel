@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.darkcolor{
+    color:white
+}
+
+body {
+
+    height: 100vh;
+    /* background: linear-gradient(-45deg, rgb(255, 215, 130), rgb(222, 240, 253)); */
+}
+
+li{
+    list-style: none;
+}
+
+header {
+
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.fa-bars {
+    display: none;
+
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .menu .box {
+    padding: 5px;
+    border-radius: 50px;
+    background-color: rgba(255, 0, 0, 0.76);
+
+}
+
+header .menu .nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.76);
+    border-radius: 40px;
+}
+
+header .menu .nav ul li {
+    list-style: none;
+    padding: 12px;
+    border-radius: 50px;
+    transition: .2s ease;
+
+}
+
+header .menu .nav ul li:hover {
+    background-color: black;
+
+}
+
+header .menu .nav ul li:hover a {
+    color: white;
+}
+
+header .menu .nav ul li a {
+    text-decoration: none;
+    color: rgb(22, 20, 20);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+
+
+
+header .menu .box .setting>li{
+     padding: 12px;
+     border-radius: 50px;
+      transition: .3s ease-in;
+      cursor: pointer;
+}
+
+header .menu .box .setting ul{
+     background-color: rgba(255, 0, 0, 0.76);
+     
+}
+
+header .menu .icon {
+    padding: 12px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+header .menu .icon:hover {
+    transform: scale(1.1);
+}
+
+header .menu .box .setting>li:hover {
+    background-color: black;
+    color: white;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    color: rgb(183, 3, 3);
+}
+
+/*---------------section--------------*/
+
+section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+section h1 {
+    font-size: 1.4rem;
+}
+
+
+section .tablecontainer {
+
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.421);
+    border-radius: 30px;
+    padding: 20px;
+    width: 80%;
+
+}
+
+section .tablecontainer .filters {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+section .tablecontainer .filters select {
+    border-radius: 20px;
+    padding: 0 10px;
+    height: 5vh;
+    border: none;
+}
+
+section .tablecontainer .filters .inputbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+section .tablecontainer .filters .fa-print {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+section .tablecontainer .filters .inputbox i {
+    position: absolute;
+    left: 5px;
+}
+
+section .tablecontainer .filters .inputbox input {
+    height: 5vh;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0 30px;
+    border: none;
+}
+
+section .tablecontainer table {
+    width: 100%;
+
+
+}
+
+section .tablecontainer .table {
+    height: 55vh;
+    overflow: auto;
+
+}
+
+section .tablecontainer table {
+    border-collapse: collapse;
+
+}
+
+section .tablecontainer table thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 0, 0);
+    border-bottom: 1px solid gray;
+
+}
+
+section .tablecontainer table th,
+td {
+    padding: 20px;
+    text-align: center;
+}
+
+section .tablecontainer table tbody {
+    background-color: aliceblue;
+}
+
+section .tablecontainer table tbody tr:hover {
+    background-color: rgba(27, 23, 23, 0.925);
+    color: white;
+}
+
+
+section .tablecontainer .total {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+
+}
+
+
+
+/*-------------------form--------------*/
+.form {
+    width: 30%;
+}
+
+.form form {
+    padding: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.421);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: lab(100% 0.01 -0.01);
+}
+
+.form form .inputbox {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form form .inputbox label {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.form form .inputbox input,
+select {
+    padding: 0 20px;
+    height: 6vh;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.671);
+}
+
+.form form .inputbox input,
+select:focus {
+    outline: none;
+}
+
+.form form .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.form form .buttons button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+
+
+@media screen and (max-width:800px) {
+    body {
+        height: auto;
+    }
+
+    header {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        position: relative;
+
+    }
+
+    .fa-bars {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        font-size: 1.2rem;
+    }
+
+    header .menu {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .form {
+        width: 90%;
+    }
+
+    section .tablecontainer {
+        box-shadow: none;
+        border-radius: 30px;
+        padding: 20px;
+        width: 100%;
+    }
+
+}
