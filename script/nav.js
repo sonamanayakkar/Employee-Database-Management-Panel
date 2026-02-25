@@ -3,6 +3,8 @@
 $(document).ready(function () {
 
 
+
+
     $(".fa-bars").on('click', () => {
         $(".menu").slideToggle()
 
@@ -10,25 +12,34 @@ $(document).ready(function () {
 
     $("#darkmode").on('click', () => {
 
-        $("body").css({
-            "background-color": "black"
-        })
+        localStorage.setItem("themecolors", "darkcolor")
+        let getdatafromDb = localStorage.getItem("themecolors")
+        if (getdatafromDb == "darkcolor") {
+            $("body").addClass("darkcolor")
+        }
 
     })
     $("#lightmode").on('click', () => {
 
-        $("body").css({
-            "background-color": "white"
-        })
+
+        localStorage.setItem("themecolors", "lightcolor")
+        let getdatafromDb = localStorage.getItem("themecolors")
+
+        if (getdatafromDb == "lightcolor") {
+            $("body").removeClass("darkcolor")
+        }
 
     })
 
 
-
-
-
-
-
+    let getdatafromDb = localStorage.getItem("themecolors")
+  
+    if (getdatafromDb == "darkcolor") {
+        $("body").addClass("darkcolor")
+    }
+    else {
+        $("body").removeClass("darkcolor")
+    }
 
 
 

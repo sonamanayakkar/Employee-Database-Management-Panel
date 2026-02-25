@@ -26,7 +26,16 @@
                 </ul>
             </div>
             <div class="box">
-                <h3><i class="fa-solid fa-gear"></i>setting</h3>
+                <ul class="setting">
+                    <li id="darkmode"><i class="fa-solid fa-moon"></i>darkmode</li>
+                </ul>
+
+            </div>
+            <div class="box">
+                <ul class="setting">
+                    <li id="lightmode"><i class="fa-solid fa-moon lightmode"></i>lightmode</li>
+                </ul>
+
             </div>
             <div class="box icon">
                 <i class="fa-solid fa-bell"></i>
@@ -50,10 +59,11 @@
 
             <div class="filters">
 
-                <select name="" id="">
-                    <option value="">Department</option>
-                    <option value="">cse</option>
-                    <option value="">eee</option>
+                <select name="" id="filter">
+                    <option value="All">All</option>
+                    <option value="software developer">software developer</option>
+                    <option value="systems analysts">systems analysts</option>
+                    <option value="network engineer">network engineer</option>
                 </select>
 
                 <div class="inputbox">
@@ -186,8 +196,8 @@
             <div class="total">
 
                 <div class="sum">
-                    <h3>Employee count: <span> 130</span></h3>
-                    <h3>Total Salary: <span> 200000</span></h3>
+                    <h3>Employee count: <span id="counts"> 130</span></h3>
+                    <h3>Total Salary: <span id="total_salary"> 200000</span></h3>
                 </div>
 
 
@@ -201,6 +211,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="script/nav.js"></script>
+    <script src="script/data.js"></script>
 </body>
 
 </html>

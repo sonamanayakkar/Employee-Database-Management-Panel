@@ -9,17 +9,40 @@
     font-family: "Poppins", sans-serif;
 }
 
-.darkcolor{
-    color:white
+:root {
+    --background-color: white;
+    --text-color: rgb(22, 20, 20);
+    --opposit-text-color: rgb(255, 255, 255);
+    --form-bg: white;
+    --nav-color: rgba(255, 0, 0, 0.76);
+    --insidenav-color: black;
+    --red-color: red;
+    --table-body-color: aliceblue;
+    --table-head-color: rgb(255, 0, 0);
+    --table-container-color: white;
+}
+
+.darkcolor {
+    --background-color: black;
+    --text-color: rgb(255, 255, 255);
+    --form-bg: rgb(29, 28, 28);
+    --opposit-text-color: rgb(0, 0, 0);
+    --nav-color: rgba(147, 147, 147, 0.76);
+    --insidenav-color: rgb(255, 255, 255);
+    --red-color: rgb(255, 145, 0);
+    --table-body-color: rgb(34, 34, 34);
+    --table-head-color: rgb(0, 0, 0);
+    --table-container-color: rgb(28, 28, 28);
 }
 
 body {
 
     height: 100vh;
-    /* background: linear-gradient(-45deg, rgb(255, 215, 130), rgb(222, 240, 253)); */
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-li{
+li {
     list-style: none;
 }
 
@@ -31,6 +54,10 @@ header {
     justify-content: space-between;
 
 
+}
+
+.error {
+    color: red;
 }
 
 .fa-bars {
@@ -47,7 +74,7 @@ header .menu {
 header .menu .box {
     padding: 5px;
     border-radius: 50px;
-    background-color: rgba(255, 0, 0, 0.76);
+    background-color: var(--nav-color);
 
 }
 
@@ -56,7 +83,7 @@ header .menu .nav ul {
     align-items: center;
     gap: 20px;
     padding: 5px;
-    background-color: rgba(255, 0, 0, 0.76);
+    background-color: var(--nav-color);
     border-radius: 40px;
 }
 
@@ -69,17 +96,17 @@ header .menu .nav ul li {
 }
 
 header .menu .nav ul li:hover {
-    background-color: black;
+    background-color: var(--insidenav-color);
 
 }
 
 header .menu .nav ul li:hover a {
-    color: white;
+    color: var(--opposit-text-color);
 }
 
 header .menu .nav ul li a {
     text-decoration: none;
-    color: rgb(22, 20, 20);
+    color: var(--text-color);
     font-weight: 600;
     font-size: .9rem;
 }
@@ -87,16 +114,16 @@ header .menu .nav ul li a {
 
 
 
-header .menu .box .setting>li{
-     padding: 12px;
-     border-radius: 50px;
-      transition: .3s ease-in;
-      cursor: pointer;
+header .menu .box .setting>li {
+    padding: 12px;
+    border-radius: 50px;
+    transition: .3s ease-in;
+    cursor: pointer;
 }
 
-header .menu .box .setting ul{
-     background-color: rgba(255, 0, 0, 0.76);
-     
+header .menu .box .setting ul {
+    background-color: var(--nav-color);
+
 }
 
 header .menu .icon {
@@ -109,14 +136,24 @@ header .menu .icon:hover {
     transform: scale(1.1);
 }
 
+.lightmode {
+    color: var(--text-color);
+}
+
+
 header .menu .box .setting>li:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--insidenav-color);
+    color: var(--opposit-text-color);
+}
+
+header .menu .box .setting>li:hover .lightmode {
+
+    color: var(--opposit-text-color);
 }
 
 header h1 {
     font-size: 1.4rem;
-    color: rgb(183, 3, 3);
+    color: var(--red-color);
 }
 
 /*---------------section--------------*/
@@ -141,6 +178,7 @@ section .tablecontainer {
     border-radius: 30px;
     padding: 20px;
     width: 80%;
+    background-color: var(--table-container-color);
 
 }
 
@@ -174,6 +212,7 @@ section .tablecontainer .filters .fa-print {
 section .tablecontainer .filters .inputbox i {
     position: absolute;
     left: 5px;
+    color: black;
 }
 
 section .tablecontainer .filters .inputbox input {
@@ -204,7 +243,7 @@ section .tablecontainer table {
 section .tablecontainer table thead {
     position: sticky;
     top: 0;
-    background-color: rgb(255, 0, 0);
+    background-color: var(--table-head-color);
     border-bottom: 1px solid gray;
 
 }
@@ -216,7 +255,7 @@ td {
 }
 
 section .tablecontainer table tbody {
-    background-color: aliceblue;
+    background-color: var(--table-body-color)
 }
 
 section .tablecontainer table tbody tr:hover {
@@ -247,7 +286,7 @@ section .tablecontainer .total {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: lab(100% 0.01 -0.01);
+    background: var(--form-bg);
 }
 
 .form form .inputbox {
@@ -267,7 +306,7 @@ select {
     padding: 0 20px;
     height: 6vh;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.671);
+    border-bottom: 1px solid var(--text-color);
 }
 
 .form form .inputbox input,
@@ -285,7 +324,7 @@ select:focus {
     padding: 10px;
     border: none;
     cursor: pointer;
-    background-color: red;
+    background-color: var(--red-color);
     font-weight: 700;
     color: rgb(255, 255, 255);
 }
@@ -318,7 +357,10 @@ select:focus {
 
     header .menu {
         display: none;
-        display: flex;
+    }
+
+    header .menu[style*="display: block"] {
+        display: flex !important;
         flex-direction: column;
         align-items: center;
         gap: 10px;

@@ -33,7 +33,7 @@
             </div>
             <div class="box">
                 <ul class="setting">
-                    <li id="lightmode"><i class="fa-solid fa-moon"  style="color: white;"></i>lightmode</li>
+                    <li id="lightmode"><i class="fa-solid fa-moon lightmode" ></i>lightmode</li>
                 </ul>
 
             </div>
@@ -60,27 +60,28 @@
 
                 <div class="inputbox">
                     <label for="">Employee Name</label>
-                    <input type="text" placeholder="Enter name here.." maxlength="20">
+                    <input type="text" placeholder="Enter name here.." maxlength="20" id="name">
+                    <span class="error"></span>
                 </div>
-                <div class="inputbox">
-                    <label for="">Employee ID</label>
-                    <input type="number" placeholder="">
-                </div>
+                
                 <div class="inputbox">
                     <label for="">Phone</label>
-                    <input type="number" placeholder="">
+                    <input type="number" placeholder="" id="phnumber">
+                     <span class="error"></span>
                 </div>
                 <div class="inputbox">
-                    <select name="" id="">
-                        <option value="">designation</option>
-                        <option value="">software developer</option>
-                        <option value=""> systems analysts</option>
-                        <option value="">network engineer</option>
+                    <select name="" id="department">
+                        <option value="">please select designation</option>
+                        <option value="software developer">software developer</option>
+                        <option value="systems analysts"> systems analysts</option>
+                        <option value="network engineer">network engineer</option>
                     </select>
+                     <span class="error"></span>
                 </div>
                 <div class="inputbox">
                     <label for="">Salary</label>
-                    <input type="number" placeholder="">
+                    <input type="number" placeholder="" id="Salary">
+                     <span class="error"></span>
                 </div>
 
                 <div class="buttons">
@@ -98,6 +99,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="script/nav.js"></script>
+    <script src="script/form.js"></script>
 </body>
 
 </html>
