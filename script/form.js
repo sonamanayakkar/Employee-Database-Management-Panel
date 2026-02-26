@@ -21,15 +21,17 @@ $(document).ready(function () {
 
     let array = new Array()
 
-    let datafromDB = getitem("employee_details")
-   
-    
-   
-    datafromDB.forEach(element => {
-        array.push(element)
-    });
+    let datafromDB = getitem("employee_details") || []
 
-    setitem("employee_details",array)
+    if (datafromDB.length > 0) {
+        datafromDB.forEach(element => {
+            array.push(element)
+        });
+
+        setitem("employee_details", array)
+    }
+
+
 
     $("form").on('submit', (e) => {
         e.preventDefault()
@@ -38,7 +40,7 @@ $(document).ready(function () {
         let conformation2 = false
         let conformation3 = false
         let conformation4 = false
-
+        debugger
         if (employeename.val() != "") {
             if (employeename.val().length >= 3) {
                 conformation1 = true
@@ -102,7 +104,7 @@ $(document).ready(function () {
             }
             else {
                 conformation2 = false
-                employeename.css({
+                phone_number.css({
                     "border": "2px solid red"
                 })
                 error2.innerText = "please enter valid phone number"
@@ -112,7 +114,7 @@ $(document).ready(function () {
         else {
             conformation2 = false
             conformation2 = false
-            employeename.css({
+            phone_number.css({
                 "border": "2px solid red"
             })
             error2.innerText = "please enter phone number"

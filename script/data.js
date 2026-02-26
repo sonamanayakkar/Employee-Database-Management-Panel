@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
     let upload = () => {
-
+        debugger
         let tbody = $("tbody")
 
         let datafromDb = getitem("employee_details")
@@ -43,11 +43,33 @@ $(document).ready(function () {
 
     }
 
-    upload()
+    let datafromDb = getitem("employee_details") || []
+
+
+    if (datafromDb.length > 0) {
+        debugger
+        upload()
+    } else {
+        $("#counts").text("0")
+        $("#total_salary").text("0")
+
+        let tbody = $("tbody")
+        let count = 1
+        let row = `
+
+                         <tr>
+                            <td colspan=7>No data found <i class="fa-solid fa-file-circle-xmark"></i></td>
+                        </tr>
+            
+            `
+        count++
+
+        tbody.html(row)
+    }
+
 
 
     $("#filter").on('change', (e) => {
-
 
         let target = e.target.value
 
@@ -128,11 +150,6 @@ $(document).ready(function () {
         }
 
         else {
-
-            let datafromDb = getitem("employee_details")
-
-            $("#counts").text(datafromDb.length)
-            $("#total_salary").text(totalamt(datafromDb))
             upload()
         }
 
