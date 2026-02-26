@@ -47,7 +47,7 @@ li {
 }
 
 header {
-    
+
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -166,7 +166,7 @@ section {
 
 }
 
-.formsection{
+.formsection {
     padding: 40px 0;
 }
 
@@ -266,15 +266,30 @@ section .tablecontainer table tbody tr:hover {
     color: white;
 }
 
+section .tablecontainer table tbody tr{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.352);
+}
+
 
 section .tablecontainer .total {
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+
     padding: 10px;
 
 }
+
+section .tablecontainer .total .sum {
+    display: flex;
+    justify-content: space-around;
+
+   
+}
+
+  section .tablecontainer .total .sum h3{
+        font-size: 1.1rem;
+        font-weight: 600;
+        
+    }
 
 
 
@@ -350,11 +365,20 @@ select:focus {
 
     }
 
+    header h1 {
+        font-size: 1rem;
+        color: var(--red-color);
+    }
+
+    section h1 {
+        font-size: .9rem;
+    }
+
     .fa-bars {
         display: block;
         position: absolute;
-        right: 15px;
-        top: 20px;
+        right: 5px;
+        top: 10px;
         font-size: 1.2rem;
     }
 
@@ -376,9 +400,33 @@ select:focus {
 
     section .tablecontainer {
         box-shadow: none;
+        background-color: transparent;
         border-radius: 30px;
         padding: 20px;
         width: 100%;
     }
+
+}
+
+
+
+
+@media screen and (max-width:550px) {
+
+
+    section .tablecontainer .total .sum {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+       
+    }
+
+    section .tablecontainer .total .sum h3{
+        font-size: 1rem;
+    }
+
+
 
 }
