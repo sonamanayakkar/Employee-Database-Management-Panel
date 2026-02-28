@@ -26,10 +26,6 @@ $(document).ready(function () {
                             <td>${element.phone}</td>
                             <td>${element.designation}</td>
                             <td>${element.salary}</td>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </td>
                         </tr>
             
             `
@@ -47,7 +43,7 @@ $(document).ready(function () {
 
 
     if (datafromDb.length > 0) {
-        debugger
+      
         upload()
     } else {
         $("#counts").text("0")
@@ -58,7 +54,7 @@ $(document).ready(function () {
         let row = `
 
                          <tr>
-                            <td colspan=7>No data found <i class="fa-solid fa-file-circle-xmark"></i></td>
+                            <td colspan=6>No data found <i class="fa-solid fa-file-circle-xmark"></i></td>
                         </tr>
             
             `
@@ -113,10 +109,6 @@ $(document).ready(function () {
                             <td>${element.phone}</td>
                             <td>${element.designation}</td>
                             <td>${element.salary}</td>
-                            <td>
-                                <i class="fa-regular fa-trash-can"></i>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </td>
                         </tr>
             
             `

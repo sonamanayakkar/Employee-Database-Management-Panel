@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,7 +18,7 @@
 
     <header>
         <div class="two">
-            <h1>Employee Data Management</h1>
+            <h1>Employee Salary Management</h1>
         </div>
         <div class="menu">
             <div class="nav">
@@ -28,16 +29,13 @@
             </div>
             <div class="box">
                 <ul class="setting">
-                    <li id="darkmode"><i class="fa-solid fa-moon"></i>darkmode</li>
+                    <li id="mode"><i class="fa-solid fa-moon moon"></i><i class="fa-solid fa-sun sun"
+                            style="display: none;"></i></li>
+
                 </ul>
 
             </div>
-            <div class="box">
-                <ul class="setting">
-                    <li id="lightmode"><i class="fa-solid fa-moon lightmode"></i>lightmode</li>
-                </ul>
 
-            </div>
             <div class="box icon">
                 <i class="fa-solid fa-bell"></i>
             </div>
@@ -67,10 +65,10 @@
                     <option value="network engineer">network engineer</option>
                 </select>
 
-                <div class="inputbox">
+                <!-- <div class="inputbox">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" name="" id="" placeholder="search">
-                </div>
+                </div> -->
 
                 <i class="fa-solid fa-print printer"></i>
 
@@ -85,7 +83,7 @@
                         <th>Phone</th>
                         <th>designation</th>
                         <th>Salary</th>
-                        <th>Action</th>
+                        <!-- <th>Action</th> -->
                     </thead>
 
                     <tbody>
@@ -210,6 +208,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="script/nav.js"></script>
     <script src="script/data.js"></script>

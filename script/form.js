@@ -161,6 +161,11 @@ $(document).ready(function () {
             setitem("employee_details", array)
 
             clearall()
+            Swal.fire({
+                title: "Employee Added to Table✅",
+                icon: "success",
+                draggable: true
+            });
 
 
         }
