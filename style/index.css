@@ -266,7 +266,7 @@ section .tablecontainer table tbody tr:hover {
     color: white;
 }
 
-section .tablecontainer table tbody tr{
+section .tablecontainer table tbody tr {
     border-bottom: 2px solid rgba(0, 0, 0, 0.352);
 }
 
@@ -282,14 +282,14 @@ section .tablecontainer .total .sum {
     display: flex;
     justify-content: space-around;
 
-   
+
 }
 
-  section .tablecontainer .total .sum h3{
-        font-size: 1.1rem;
-        font-weight: 600;
-        
-    }
+section .tablecontainer .total .sum h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+
+}
 
 
 
@@ -345,6 +345,27 @@ select:focus {
     background-color: var(--red-color);
     font-weight: 700;
     color: rgb(255, 255, 255);
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    table,
+    table * {
+        visibility: visible;
+    }
+
+    .total * {
+        visibility: visible;
+    }
+
+    table {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
 
 
@@ -420,10 +441,10 @@ select:focus {
         justify-content: center;
         align-items: center;
         gap: 20px;
-       
+
     }
 
-    section .tablecontainer .total .sum h3{
+    section .tablecontainer .total .sum h3 {
         font-size: 1rem;
     }
 

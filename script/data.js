@@ -147,8 +147,7 @@ $(document).ready(function () {
 
     })
 
-
-
+    
 
     function getitem(key) {
         let get = localStorage.getItem(key)
